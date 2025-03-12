@@ -9,6 +9,7 @@ import ComponentA from './components/TestAndOthers/componentA';
 import ComponentB from './components/TestAndOthers/componentB';
 import ListExample from './components/DisplayData/listExample';
 import Form from './components/Forms/form';
+import DynamicList from './components/Dynamic Rendering/dynamicList';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -68,6 +69,16 @@ function App() {
             </div>
             <div className='col-6 border rounded'>
               <Form />
+            </div>
+          </div>
+        </div>
+        <div className={mainContainer}>
+          <div className="row">
+            <div className='col-6 border rounded'>
+              <DynamicList />
+            </div>
+            <div className='col-6 border rounded'>
+             
             </div>
           </div>
         </div>
