@@ -7,9 +7,10 @@ import BootstrapComponent from './components/TestAndOthers/bootstrapEx';
 import Counter from './components/TestAndOthers/counter';
 import ComponentA from './components/TestAndOthers/componentA';
 import ComponentB from './components/TestAndOthers/componentB';
-import ListExample from './components/DisplayData/listExample';
+import ListExample from './components/DisplayData/ListExample';
 import Form from './components/Forms/form';
 import DynamicList from './components/Dynamic Rendering/dynamicList';
+import ListFromDataContext from './components/DisplayData/ListFromDataContext';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -78,7 +79,7 @@ function App() {
               <DynamicList />
             </div>
             <div className='col-6 border rounded'>
-             
+              <ListFromDataContext />
             </div>
           </div>
         </div>

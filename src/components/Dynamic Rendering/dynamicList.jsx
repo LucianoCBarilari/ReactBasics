@@ -15,7 +15,7 @@ const DynamicList = () => {
     ];
 
     return (
-        <div>
+        <>
             <h2>Dynamic List</h2>
             {Persons.length === 0 ? 
             (<p>No Person Found</p>) : 
@@ -27,7 +27,7 @@ const DynamicList = () => {
             </ul>
           )}
             
-        </div>
+        </>
     );
 
 
