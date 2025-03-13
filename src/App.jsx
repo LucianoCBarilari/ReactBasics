@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Button from './components/Button';
 import Home from './components/Home';
 import BootstrapComponent from './components/TestAndOthers/bootstrapEx';
 import Counter from './components/TestAndOthers/counter';
 import ComponentA from './components/TestAndOthers/componentA';
-import ComponentB from './components/TestAndOthers/componentB';
+import ComponentB from './components/TestAndOthers/ComponentB';
 import ListExample from './components/DisplayData/ListExample';
 import Form from './components/Forms/form';
 import DynamicList from './components/Dynamic Rendering/dynamicList';
