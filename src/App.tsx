@@ -6,7 +6,7 @@ import Home from './components/Home';
 import BootstrapComponent from './components/TestAndOthers/bootstrapEx';
 import Counter from './components/TestAndOthers/counter';
 import ComponentA from './components/TestAndOthers/componentA';
-import ComponentB from './components/TestAndOthers/ComponentB';
+import ComponentB from './components/TestAndOthers/componentB';
 import ListExample from './components/DisplayData/ListExample';
 import Form from './components/Forms/form';
 import DynamicList from './components/Dynamic Rendering/dynamicList';
@@ -49,7 +49,7 @@ function App() {
         <div className={mainContainer}>
           <div className="row">
             <div className={col_4Class}>
-              <ComponentA emoji="🚀" title="Space Adventure" />
+              <ComponentA emoji="🚀" titulo="Space Adventure" />
               <ComponentB buttonText="Button(reused component)" />
             </div>
             <div className={col_4Class}>

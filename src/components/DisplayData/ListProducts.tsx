@@ -2,12 +2,21 @@ import { useContext } from 'react';
 import { DataContext } from '../Data/DataContext';
 
 function ListProducts () {    
-    const { data } = useContext(DataContext);
+    //const { data } = useContext(DataContext);
     const limit = 4; // Número máximo de elementos a mostrar
     
     // Tomar solo los primeros 'limit' elementos
-    const limitedData = data.slice(0, limit);
+    //const limitedData = data.slice(0, limit);
 
+    return (
+        <>
+        </>
+    );
+}
+
+export default ListProducts;
+
+/*
     return (
         <div>
             <h2>List of Products</h2>
@@ -30,5 +39,4 @@ function ListProducts () {
         </div>
     );
 }
-
-export default ListProducts;
+*/ 

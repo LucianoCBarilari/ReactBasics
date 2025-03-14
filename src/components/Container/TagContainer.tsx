@@ -1,5 +1,12 @@
 
-const TagContainer = ({fixed, gutters,maxWidth})=> {
+
+interface TagContainerProps {
+    fixed: string;
+    gutters: boolean;
+    maxWidth: number;
+}
+
+const TagContainer = () => {
     
     let StyleConstructor ="container";
 
