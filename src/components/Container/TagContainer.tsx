@@ -1,10 +1,6 @@
 
 
-interface TagContainerProps {
-    fixed: string;
-    gutters: boolean;
-    maxWidth: number;
-}
+
 
 const TagContainer = () => {
     
@@ -19,3 +15,5 @@ const TagContainer = () => {
     )
 }
 export default TagContainer;
+
+// un comeponente debe tener tamaños 

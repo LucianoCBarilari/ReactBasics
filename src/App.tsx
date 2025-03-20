@@ -11,6 +11,11 @@ import ListExample from './components/DisplayData/ListExample';
 import Form from './components/Forms/form';
 import DynamicList from './components/Dynamic Rendering/dynamicList';
 import ListFromDataContext from './components/DisplayData/ListFromDataContext';
+import TagAppBar from './components/AppBar/TagAppBar';
+
+import { BackgroundColors } from "./Helpers/BackgroundColors";
+import { Position } from "./Helpers/Position";
+import { TextColors } from "./Helpers/TextColors";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,8 +23,20 @@ function App() {
   const [darkMode, setDarkMode] = useState(true);
   const col_4Class = 'col-4 border shadow rounded';
   const mainContainer = "container m-0 p-2";
+
+  
   return (
     <>
+     <div>
+        <TagAppBar 
+            color={TextColors.White} 
+            fixed={Position.FixedTop} 
+            backgroundColor={BackgroundColors.Primary}>
+
+            <div>Contenido del AppBar</div>
+        </TagAppBar>
+      </div>
+      
       <div className="bg-dark text-white">
         <div className={mainContainer}>
           <div className="row">
@@ -31,6 +48,7 @@ function App() {
             </div>
           </div>
         </div>
+       
         <div className={mainContainer}>
           <div className="row">
             <div className={col_4Class}>
