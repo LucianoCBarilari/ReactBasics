@@ -16,7 +16,7 @@ const TagAppBar = (props: TagAppBarProps) => {
     let appBarFixed: string = getPosition(props.fixed ?? Position.FixedTop);
     let backgroundColor: string = getBackgroundColor(props.backgroundColor ?? BackgroundColors.Light);
 
-    const appBarStyle: string = `app-bar ${appBarColor} ${appBarFixed} ${backgroundColor}`;
+    const appBarStyle: string = `${appBarColor} ${appBarFixed} ${backgroundColor}`;
 
     return (
         <div className={appBarStyle} style={{ height: "75px" }}>

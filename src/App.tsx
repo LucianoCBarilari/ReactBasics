@@ -33,21 +33,22 @@ function App() {
             fixed={Position.FixedTop} 
             backgroundColor={BackgroundColors.Primary}>
 
-            <div>Contenido del AppBar</div>
+                 <div className={mainContainer}>
+                      <div className="row">
+                           <div className="col-8">
+                                   <h1>Learning React Basics</h1>
+                           </div>
+                      <div className="col-4">
+                                   <button onClick={() => setDarkMode(!darkMode)}>Change Style</button>
+                      </div>
+                </div>
+        </div>
+         
         </TagAppBar>
       </div>
       
       <div className="bg-dark text-white">
-        <div className={mainContainer}>
-          <div className="row">
-            <div className="col-8">
-              <h1>Learning React Basics</h1>
-            </div>
-            <div className="col-4">
-              <button onClick={() => setDarkMode(!darkMode)}>Change Style</button>
-            </div>
-          </div>
-        </div>
+        
        
         <div className={mainContainer}>
           <div className="row">
