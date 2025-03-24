@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import Button from './components/Button';
 import Home from './components/Home';
@@ -16,6 +17,9 @@ import TagAppBar from './components/AppBar/TagAppBar';
 import { BackgroundColors } from "./Helpers/BackgroundColors";
 import { Position } from "./Helpers/Position";
 import { TextColors } from "./Helpers/TextColors";
+import TagDrawer from './components/Drawer/TagDrawer';
+import TagDrawerHeader from './components/Drawer/TagDrawerHeader';
+import TagDrawerBody from './components/Drawer/TagDrawerBody';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -23,11 +27,11 @@ function App() {
   const [darkMode, setDarkMode] = useState(true);
   const col_4Class = 'col-4 border shadow rounded';
   const mainContainer = "container m-0 p-2";
-
+  let openDrawer= true; 
   
   return (
     <>
-     <div>
+     <div className="row">
         <TagAppBar 
             color={TextColors.White} 
             fixed={Position.FixedTop} 
@@ -35,17 +39,34 @@ function App() {
 
                  <div className={mainContainer}>
                       <div className="row">
-                           <div className="col-8">
-                                   <h1>Learning React Basics</h1>
-                           </div>
+                      <div className="col-4">
+                           <button className="navbar-toggler" 
+                                   type="button" 
+                                   data-bs-toggle="offcanvas" 
+                                   data-bs-target="#offcanvasNavbar" 
+                                   aria-controls="offcanvasNavbar"                                    
+                                   aria-label="Toggle navigation">
+                               <span className="bi bi-columns-gap"/>
+                           </button>
+                      </div>
+                      <div className="col-4">
+                                   <h5>Learning React Basics</h5>
+                      </div>                           
                       <div className="col-4">
                                    <button onClick={() => setDarkMode(!darkMode)}>Change Style</button>
                       </div>
                 </div>
-        </div>
-         
+        </div>         
         </TagAppBar>
       </div>
+      <div className="row t-10">
+          {/**/}
+          <TagDrawer open={openDrawer}>
+               <TagDrawerHeader />
+               <TagDrawerBody />
+          </TagDrawer>  
+      </div>
+      
       
       <div className="bg-dark text-white">
         
