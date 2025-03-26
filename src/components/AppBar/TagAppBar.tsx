@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import { BackgroundColors } from "../../Helpers/BackgroundColors";
 import { Position } from "../../Helpers/Position";
 import { TextColors } from "../../Helpers/TextColors";
@@ -8,19 +8,21 @@ interface TagAppBarProps {
     color?: TextColors;
     fixed?: Position;
     backgroundColor?: BackgroundColors;
-    children?: ReactNode; // Añadir children a las props
+    _class?: string;
+    _style?: CSSProperties;
+    children?: ReactNode;
 }
 
 const TagAppBar = (props: TagAppBarProps) => {
-    let appBarColor: string = getColorText(props.color ?? TextColors.Primary);
-    let appBarFixed: string = getPosition(props.fixed ?? Position.FixedTop);
-    let backgroundColor: string = getBackgroundColor(props.backgroundColor ?? BackgroundColors.Light);
+    let appTextColor: string = getColorText(props.color);
+    let appBarFixed: string = getPosition(props.fixed);
+    let backgroundColor: string = getBackgroundColor(props.backgroundColor);
 
-    const appBarStyle: string = `${appBarColor} ${appBarFixed} ${backgroundColor}`;
+    let appBarStyle: string = `${props._class} ${appTextColor} ${appBarFixed} ${backgroundColor}`;
 
     return (
         <div className={appBarStyle} style={{ height: "75px" }}>
-            {props.children} {/* Renderizar los children aquí */}
+            {props.children}
         </div>
     );
 }

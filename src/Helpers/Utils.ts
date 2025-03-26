@@ -2,7 +2,7 @@ import { TextColors } from "./TextColors";
 import { Position } from "./Position";
 import { BackgroundColors } from "./BackgroundColors";
 
-function getColorText(color: TextColors): string {
+function getColorText(color?: TextColors): string {
     let tempColor: string = "";
     if(color == null )
         return "";
@@ -38,7 +38,7 @@ function getColorText(color: TextColors): string {
     return tempColor;
   }
 
-function getPosition(aligment : Position): string {
+function getPosition(aligment?: Position): string {
 
     let tempPosition: string = "";
     if(aligment == null )
@@ -63,7 +63,7 @@ function getPosition(aligment : Position): string {
     return tempPosition;
 }
 
-function getBackgroundColor( background : BackgroundColors) : string{
+function getBackgroundColor( background?: BackgroundColors) : string{
     let tempBackground: string = "";
     if(background == null )
         return "";
