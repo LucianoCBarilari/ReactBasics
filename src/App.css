@@ -1,0 +1,15 @@
+.offcanvas.offcanvas-start {
+    top: 75px!important;
+    width: 300px!important;
+}
+
+/* Remove background dimming effect */
+.offcanvas-backdrop {
+    opacity: 0 !important;
+    background-color: transparent !important;
+}
+
+/* Optional: If you still want the backdrop for click events but completely transparent */
+.offcanvas-backdrop.show {
+    opacity: 0 !important;
+}

@@ -1,58 +1,67 @@
 import './App.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import TagMainLayout from './components/MainLayout/TagMainLayout';
+import TagMainLayout from './TagComponents/MainLayout/TagMainLayout';
 import { BackgroundColors } from "./Helpers/BackgroundColors";
-import TagAppBar from './components/AppBar/TagAppBar';
+import TagAppBar from './TagComponents/AppBar/TagAppBar';
 import { TextColors } from './Helpers/TextColors';
 import { Position } from './Helpers/Position';
-import TagDrawer from './components/Drawer/TagDrawer';
-import { OffcanvasPosition } from './components/Drawer/OffcanvasPosition';
-import TagDrawerHeader from './components/Drawer/TagDrawerHeader';
-import TagDrawerBody from './components/Drawer/TagDrawerBody';
-import TagMainContainer from './components/Containers/TagMainContainer';
-import Body from './components/Body';
-import TagNavMenu from './components/Menu/TagNavMenu';
-
+import TagDrawer from './TagComponents/Drawer/TagDrawer';
+import { OffcanvasPosition } from './TagComponents/Drawer/OffcanvasPosition';
+import TagDrawerHeader from './TagComponents/Drawer/TagDrawerHeader';
+import TagDrawerBody from './TagComponents/Drawer/TagDrawerBody';
+import TagMainContainer from './TagComponents/Containers/TagMainContainer';
+import Body from './TagComponents/Body';
+import TagNavMenu from './TagComponents/Menu/TagNavMenu';
+import TagNavLink from './TagComponents/Menu/TagNavLink';
 function App() {  
-  const mainContainer = "container m-0 p-2";
-
-
+    
   return (
     <>
     <TagMainLayout>
       <TagAppBar 
                 color={TextColors.Black} 
                 fixed={Position.FixedTop} 
-                backgroundColor={BackgroundColors.Dark}
-                _style={{padding: "200px"}}>                
-                    <div className="row">
-                        <div className="col-4">
+                backgroundColor={BackgroundColors.Primary}
+                _class='p-2'>                
+                    <div className="row mt-2 text-black">
+                        <div className="col-4 text-start">
                             <button className="navbar-toggler" 
                                     type="button" 
                                     data-bs-toggle="offcanvas" 
                                     data-bs-target="#offcanvasNavbar" 
                                     aria-controls="offcanvasNavbar"                                    
                                     aria-label="Toggle navigation">
-                                <span className="bi bi-columns-gap"/>
+                                <i className="bi bi-list fs-2"/>
                             </button>
                         </div>
-                        <div className="col-4">
-                            <h5>Learning React Basics</h5>
+                        <div className="col-4 text-center">
+                            <h3>Learning React Basics</h3>
                         </div>                           
-                        <div className="col-4">
-                            <button>Change Style</button>
+                        <div className="col-4 text-end">
+                            <button 
+                                   className="navbar-toggler"
+                                   type="button">
+                                   <i className="bi bi-three-dots-vertical fs-2"></i>
+                            </button>
                         </div>
                     </div>                     
-            </TagAppBar>
+      </TagAppBar>
             <TagDrawer 
                     offcanvasPosition={OffcanvasPosition.offcanvasStart}
-                    backgroundColor={BackgroundColors.Primary}>
-                    <TagDrawerHeader />
+                    backgroundColor={BackgroundColors.Light}>
+                    <TagDrawerHeader> 
+                        <h3>Menu</h3>
+                    </TagDrawerHeader>
                     <TagDrawerBody >
-                        <TagNavMenu />
+                        <TagNavMenu
+                           color={TextColors.Black}
+                           backgroundColor={BackgroundColors.Light} >
+                            <TagNavLink href="/" title="Home">Home</TagNavLink>
+                            <TagNavLink href="/about" title="About">About</TagNavLink>
+                        </TagNavMenu>
                     </TagDrawerBody >
             </TagDrawer>
-            <TagMainContainer  _style={{minHeight:"600px", backgroundColor: "#333333" }}>
+            <TagMainContainer>
                   <Body/>
             </TagMainContainer>
     </TagMainLayout>

@@ -5,7 +5,7 @@ export enum OffcanvasPosition {
     offcanvasBottom = "offcanvas-bottom"
 }
 
-export function getOffcanvasPosition(position: OffcanvasPosition): string {
+export function getOffcanvasPosition(position?: OffcanvasPosition): string {
     let tempPosition: string = "";
     if (position == null)
         return "";

@@ -13,16 +13,16 @@ interface TagDrawerProps{
 
 const TagDrawer = (props :TagDrawerProps) => {
     
-    let tempPosition :string = getOffcanvasPosition(props.offcanvasPosition ?? OffcanvasPosition.offcanvasStart);
-    let backgroundColor: string = getBackgroundColor(props.backgroundColor ?? BackgroundColors.Light);
+    let tempPosition :string = getOffcanvasPosition(props.offcanvasPosition);
+    let backgroundColor: string = getBackgroundColor(props.backgroundColor);
 
     let drawerStyle :string = `offcanvas ${props._class} ${tempPosition} ${backgroundColor}`;
     
     return (  
         <div 
              className={drawerStyle} style={props._style}
-             tabIndex={-1 } id="offcanvasNavbar" 
-             aria-labelledby="offcanvasNavbarLabel">
+             tabIndex={-1 } 
+             id="offcanvasNavbar" >
            {props.children}    
         </div>
     );
