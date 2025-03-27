@@ -1,8 +1,9 @@
 import { TextColors } from "./TextColors";
 import { Position } from "./Position";
 import { BackgroundColors } from "./BackgroundColors";
+import { Shadows } from "./Shadows";
 
-function getColorText(color?: TextColors): string {
+export function getColorText(color? : TextColors): string {
     let tempColor: string = "";
     if(color == null )
         return "";
@@ -36,9 +37,8 @@ function getColorText(color?: TextColors): string {
           }
     }
     return tempColor;
-  }
-
-function getPosition(aligment?: Position): string {
+}
+export function getPosition(aligment? : Position): string {
 
     let tempPosition: string = "";
     if(aligment == null )
@@ -59,11 +59,9 @@ function getPosition(aligment?: Position): string {
               break;
           }
     }
-
     return tempPosition;
 }
-
-function getBackgroundColor( background?: BackgroundColors) : string{
+export function getBackgroundColor( background? : BackgroundColors) : string {
     let tempBackground: string = "";
     if(background == null )
         return "";
@@ -97,4 +95,28 @@ function getBackgroundColor( background?: BackgroundColors) : string{
     }
     return tempBackground;
 }
-export { getColorText,getPosition,getBackgroundColor };
+export function getShadowBox(shadow? : Shadows) : string {
+
+  let tempShadow: string = "";
+  if(shadow == null )
+    return "";
+  else
+  {
+    switch (shadow) {
+      case Shadows.ShadowNone:
+        tempShadow = Shadows.ShadowNone;
+        break;
+      case Shadows.ShadowsSM:
+        tempShadow = Shadows.ShadowsSM;
+        break;
+      case Shadows.Shadows:
+        tempShadow = Shadows.Shadows;
+        break;
+      case Shadows.ShadowLg:
+        tempShadow = Shadows.ShadowLg;
+        break;
+    }
+
+  }
+  return tempShadow;
+}

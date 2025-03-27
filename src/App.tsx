@@ -13,6 +13,7 @@ import TagMainContainer from './TagComponents/Containers/TagMainContainer';
 import Body from './TagComponents/Body';
 import TagNavMenu from './TagComponents/Menu/TagNavMenu';
 import TagNavLink from './TagComponents/Menu/TagNavLink';
+import { Shadows } from './Helpers/Shadows';
 function App() {  
     
   return (
@@ -22,6 +23,7 @@ function App() {
                 color={TextColors.Black} 
                 fixed={Position.FixedTop} 
                 backgroundColor={BackgroundColors.Primary}
+                shadow={Shadows.ShadowsSM}                
                 _class='p-2'>                
                     <div className="row mt-2 text-black">
                         <div className="col-4 text-start">
@@ -48,14 +50,15 @@ function App() {
       </TagAppBar>
             <TagDrawer 
                     offcanvasPosition={OffcanvasPosition.offcanvasStart}
-                    backgroundColor={BackgroundColors.Light}>
+                    backgroundColor={BackgroundColors.Secondary}
+                    shadow={Shadows.ShadowsSM} >
                     <TagDrawerHeader> 
                         <h3>Menu</h3>
                     </TagDrawerHeader>
                     <TagDrawerBody >
                         <TagNavMenu
                            color={TextColors.Black}
-                           backgroundColor={BackgroundColors.Light} >
+                           backgroundColor={BackgroundColors.Secondary} >
                             <TagNavLink href="/" title="Home">Home</TagNavLink>
                             <TagNavLink href="/about" title="About">About</TagNavLink>
                         </TagNavMenu>
